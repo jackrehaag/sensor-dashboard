@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders 1`] = `
+<div
+  className="ui column"
+>
+  <div>
+    <button
+      className="ui button small"
+      id="chartControlTemperatureButton"
+      onClick={[Function]}
+      type="button"
+      value="temperature"
+    >
+      <i
+        className="thermometer icon"
+      />
+      Temperature
+    </button>
+    <button
+      className="ui button small"
+      id="chartControlHumidityButton"
+      onClick={[Function]}
+      type="button"
+      value="humidity"
+    >
+      <i
+        className="tint icon"
+      />
+      Humidity
+    </button>
+    <button
+      className="ui button small"
+      id="chartControlMotionDetectionButton"
+      onClick={[Function]}
+      type="button"
+      value="motion_detection"
+    >
+      <i
+        className="street view icon"
+      />
+      Motion detection
+    </button>
+    <form
+      className="ui form"
+      onSubmit={[Function]}
+      style={
+        Object {
+          "display": "inline",
+          "padding": ".5833em .833em",
+        }
+      }
+    >
+      <div
+        className="ui action small input"
+      >
+        <input
+          id="chartControlDateField"
+          onChange={[Function]}
+          placeholder="Date"
+          type="text"
+          value="2019-07-02"
+        />
+        <button
+          className="ui button"
+          id="chartControlSubmitButton"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <canvas
+      height="270"
+      width="400"
+    />
+  </div>
+</div>
+`;

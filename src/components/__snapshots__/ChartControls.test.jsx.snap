@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders 1`] = `
+<div>
+  <button
+    className="ui button small"
+    id="chartControlTemperatureButton"
+    type="button"
+    value="temperature"
+  >
+    <i
+      className="thermometer icon"
+    />
+    Temperature
+  </button>
+  <button
+    className="ui button small"
+    id="chartControlHumidityButton"
+    type="button"
+    value="humidity"
+  >
+    <i
+      className="tint icon"
+    />
+    Humidity
+  </button>
+  <button
+    className="ui button small"
+    id="chartControlMotionDetectionButton"
+    type="button"
+    value="motion_detection"
+  >
+    <i
+      className="street view icon"
+    />
+    Motion detection
+  </button>
+  <form
+    className="ui form"
+    style={
+      Object {
+        "display": "inline",
+        "padding": ".5833em .833em",
+      }
+    }
+  >
+    <div
+      className="ui action small input"
+    >
+      <input
+        id="chartControlDateField"
+        placeholder="Date"
+        type="text"
+        value="2019-06-24"
+      />
+      <button
+        className="ui button"
+        id="chartControlSubmitButton"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+`;
