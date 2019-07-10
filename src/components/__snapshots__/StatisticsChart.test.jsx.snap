@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default chart it calls chart.js with the correct config 1`] = `
+Array [
+  Array [
+    Object {},
+    Object {
+      "data": Object {
+        "datasets": Array [
+          Object {
+            "backgroundColor": Array [
+              "rgba(97, 186, 255, 0.2)",
+            ],
+            "borderColor": Array [
+              "rgba(97, 186, 255, 1)",
+            ],
+            "borderWidth": 1,
+            "data": Array [
+              Object {
+                "x": 123,
+                "y": 456,
+              },
+            ],
+            "label": "snapshot chart",
+          },
+        ],
+        "xAxisID": "time",
+        "yAxisID": "value",
+      },
+      "options": Object {
+        "elements": Object {
+          "line": Object {
+            "tension": 0,
+          },
+        },
+        "scales": Object {
+          "xAxes": Array [
+            Object {
+              "id": "time",
+              "type": "time",
+            },
+          ],
+          "yAxes": Array [
+            Object {
+              "ticks": Object {
+                "beginAtZero": true,
+              },
+            },
+          ],
+        },
+      },
+      "type": "line",
+    },
+  ],
+]
+`;
+
+exports[`default chart it renders 1`] = `
+<div>
+  <canvas
+    height="270"
+    width="400"
+  />
+</div>
+`;
