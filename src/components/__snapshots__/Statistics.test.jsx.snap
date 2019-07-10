@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders 1`] = `
+<div>
+  <div
+    className="ui two statistics"
+  >
+    <div
+      className="orange current-temp statistic"
+    >
+      <div
+        className="value"
+      >
+        21
+        °C
+      </div>
+      <div
+        className="label"
+      >
+        Temperature 
+        <i
+          className="thermometer half icon"
+        />
+      </div>
+    </div>
+    <div
+      className="teal current-temp statistic"
+    >
+      <div
+        className="value"
+      >
+        50
+        %
+      </div>
+      <div
+        className="label"
+      >
+        Humidity 
+        <i
+          className="tint icon"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="ui mini center aligned grid statistics"
+  >
+    <div
+      className="ui orange statistic"
+    >
+      <div
+        className="value"
+      >
+        2019-06-21 16:04:02
+      </div>
+      <div
+        className="label"
+      >
+        Last motion detection
+        <i
+          className="street view icon"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

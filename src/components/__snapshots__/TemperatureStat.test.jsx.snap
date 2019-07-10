@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changing the color class based on temperature prop it sets class to black when temperature is NaN 1`] = `
+<div
+  className="black current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    NaN
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to blue when temperature is below 10 (minus value) 1`] = `
+<div
+  className="blue current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    -3
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to blue when temperature is below 10 1`] = `
+<div
+  className="blue current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    1
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to orange when temperature is 20 1`] = `
+<div
+  className="orange current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    20
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to orange when temperature is above 20 1`] = `
+<div
+  className="orange current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    22
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to red when temperature is 30 1`] = `
+<div
+  className="red current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    30
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to red when temperature is above 30 1`] = `
+<div
+  className="red current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    35
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to yellow when temperature is 10 1`] = `
+<div
+  className="yellow current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    10
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`changing the color class based on temperature prop it sets class to yellow when temperature is above 10 1`] = `
+<div
+  className="yellow current-temp statistic"
+>
+  <div
+    className="value"
+  >
+    11
+    °C
+  </div>
+  <div
+    className="label"
+  >
+    Temperature 
+    <i
+      className="thermometer half icon"
+    />
+  </div>
+</div>
+`;
