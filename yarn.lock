@@ -6575,9 +6575,9 @@ move-concurrently@^1.0.1:
     run-queue "^1.0.3"
 
 mqtt-packet@^6.0.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/mqtt-packet/-/mqtt-packet-6.2.0.tgz#8e9b101aa1e9ce0ca379d586fceaeb3ac78a193d"
-  integrity sha512-ULPTkemvZHvLv3qAk8m7EfrNf3v1uP6yhQHR2pc4IUxjJtUh2JaYia0DIR9OpGbMf+Y1Fct2mzxAFFqAkA4UCQ==
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/mqtt-packet/-/mqtt-packet-6.1.2.tgz#239493d185c9209011a5a22ebce30e098c731f81"
+  integrity sha512-yVG5PoS3wJ8TLzfS8pQMsDVLAf/EipnBAG5XQE9X/9L0EMxuduI9J2WnlRvJT497K1CUT4VJWjoP08+CKiKt1Q==
   dependencies:
     bl "^1.2.2"
     inherits "^2.0.3"

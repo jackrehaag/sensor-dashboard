@@ -1,10 +1,14 @@
 import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 import Statistics from "./components/Statistics";
 import ChartDisplay from "./components/ChartDisplay";
+import Menu from "./components/Menu";
 
 function App() {
   return (
     <div>
+      <Menu />
       <div className="ui container">
         <div className="ui grid">
           <div className="ui eleven wide column">
