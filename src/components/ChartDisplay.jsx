@@ -10,8 +10,12 @@ class ChartDisplay extends React.Component {
   state = { dateSelection: defaultDate, metricSelection: defaultMetric };
 
   fetchNewData = async () => {
+    const data = await getData(
+      this.state.metricSelection,
+      this.state.dateSelection
+    );
     this.setState({
-      data: await getData(this.state.metricSelection, this.state.dateSelection)
+      data: data
     });
   };
 
@@ -31,8 +35,7 @@ class ChartDisplay extends React.Component {
 
   onMetricSelection = e => {
     e.preventDefault();
-    this.setState({ metricSelection: e.target.value });
-    this.fetchNewData();
+    this.setState({ metricSelection: e.target.value }, this.fetchNewData);
   };
 
   render() {
