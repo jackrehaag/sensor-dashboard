@@ -70,11 +70,5 @@ exports[`it renders 1`] = `
       </div>
     </form>
   </div>
-  <div>
-    <canvas
-      height="270"
-      width="400"
-    />
-  </div>
 </div>
 `;

@@ -3,20 +3,48 @@ import ChartControls from "./ChartControls";
 import StatisticsChart from "./StatisticsChart";
 import getData from "../services/readings-api";
 
+const TEMPERATURE_METRIC = "temperature";
+const HUMIDITY_METRIC = "humidity";
+const MOTION_DETECTION_METRIC = "motion_detection";
+
 const defaultDate = "2019-07-02";
-const defaultMetric = "temperature";
+const defaultMetric = TEMPERATURE_METRIC;
+
+const metricDataSets = {
+  [TEMPERATURE_METRIC]: "temperatureData",
+  [HUMIDITY_METRIC]: "humidityData",
+  [MOTION_DETECTION_METRIC]: "motionDetectionData"
+};
 
 class ChartDisplay extends React.Component {
-  state = { dateSelection: defaultDate, metricSelection: defaultMetric };
+  _isMounted = false;
+  state = {
+    activeData: [],
+    dateSelection: defaultDate,
+    metricSelection: defaultMetric
+  };
 
   fetchNewData = async () => {
-    const data = await getData(
-      this.state.metricSelection,
-      this.state.dateSelection
-    );
-    this.setState({
-      data: data
-    });
+    let [
+      temperatureData,
+      humidityData,
+      motionDetectionData
+    ] = await Promise.all([
+      getData(TEMPERATURE_METRIC, this.state.dateSelection),
+      getData(HUMIDITY_METRIC, this.state.dateSelection),
+      getData(MOTION_DETECTION_METRIC, this.state.dateSelection)
+    ]);
+
+    if (this._isMounted == true) {
+      this.setState(
+        {
+          temperatureData: temperatureData,
+          humidityData: humidityData,
+          motionDetectionData: motionDetectionData
+        },
+        this.setActiveData
+      );
+    }
   };
 
   onDateChange = e => {
@@ -30,13 +58,27 @@ class ChartDisplay extends React.Component {
   };
 
   componentDidMount() {
+    this._isMounted = true;
     this.fetchNewData();
   }
 
+  setActiveData = () => {
+    if (this.state.metricSelection) {
+      const dataSet = metricDataSets[this.state.metricSelection];
+      if (dataSet && this.state[dataSet]) {
+        this.setState({ activeData: this.state[dataSet] });
+      }
+    }
+  };
+
   onMetricSelection = e => {
     e.preventDefault();
-    this.setState({ metricSelection: e.target.value }, this.fetchNewData);
+    this.setState({ metricSelection: e.target.value }, this.setActiveData);
   };
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
 
   render() {
     return (
@@ -47,7 +89,10 @@ class ChartDisplay extends React.Component {
           dateSelection={this.state.dateSelection}
           onMetricSelection={this.onMetricSelection}
         />
-        <StatisticsChart name="Humidity percentage" data={this.state.data} />
+        <StatisticsChart
+          name="Humidity percentage"
+          data={this.state.activeData}
+        />
       </div>
     );
   }
