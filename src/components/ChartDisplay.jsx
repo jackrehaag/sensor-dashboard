@@ -7,7 +7,8 @@ const TEMPERATURE_METRIC = "temperature";
 const HUMIDITY_METRIC = "humidity";
 const MOTION_DETECTION_METRIC = "motion_detection";
 
-const defaultDate = "2019-07-02";
+const date = new Date();
+const defaultDate = date.toISOString().slice(0, 10);
 const defaultMetric = TEMPERATURE_METRIC;
 
 const metricDataSets = {
